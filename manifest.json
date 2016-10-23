@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+        "name": "comScore name changer",
+        "description": "Dynamically changes C value naming convention in reporting interface",
+        "version": "0.1",
+      "browser_action": {
+        "default_icon": "favicon.png",
+        "default_popup": "popup.html"
+      },
+    "permissions": [
+      "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "modifier.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
